@@ -25,9 +25,11 @@ class League:
             team1.addLoss()
             team2.addWin()
 
-
-
     def displayLeague(self):
         for team in self.teams:
             team.calulatePoints()
             print(team.name, "- Points: ", team.points, " Wins -", team.wins, " Draws -", team.draws, " Losses -", team.losses)
+
+
+    def sortLeague(self):
+        self.teams = sorted(self.teams, key=lambda team: team.points, reverse = True)

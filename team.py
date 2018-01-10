@@ -7,6 +7,8 @@ class Team:
     draws = 0
     points = 0
 
+    eloScore = 1200
+
     totalResults = []
     last5Results = []
 
