@@ -13,7 +13,6 @@ class Result:
         self.conceded = conceded
 
 
-
     def calulatesResult(self):
         if self.scored > self.conceded:
             self.result = "home win"

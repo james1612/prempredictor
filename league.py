@@ -33,10 +33,12 @@ class League:
         self.results.remove(result)
 
 
-    def displayLeague(self):
-        for team in self.teams:
-            team.calulatePoints()
-            print(team.name, "- Points: ", team.points, " Wins -", team.wins, " Draws -", team.draws, " Losses -", team.losses)
+    # def displayLeague(self):
+    #     for team in self.teams:
+    #         team.calulatePoints()
+    #         print(team.name, "- Points: ", team.points, " Wins -", team.wins, " Draws -", team.draws, " Losses -", team.losses)
+
+
 
 
     def sortLeague(self):

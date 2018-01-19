@@ -59,3 +59,8 @@ class Team:
                 self.draws += 1
             if result.away == self.name and result.result == "draw":
                 self.draws += 1
+
+
+    def display_points(self):
+        self.calulatePoints()
+        print(self.points)

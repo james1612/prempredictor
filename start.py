@@ -1,43 +1,29 @@
 from team import Team
 from league import League
-
-
-chelsea = Team("Chelsea")
-arsenal = Team("Arsenal")
-everton = Team("Everton")
-burnley = Team("Burnley")
-
-arsenal.addWin()
-arsenal.addDraw()
-arsenal.addDraw()
-
-chelsea.addWin()
-chelsea.addLoss()
-
-everton.addDraw()
-everton.addDraw()
-everton.addLoss()
-
-burnley.addWin()
-burnley.addLoss()
-
+from result import Result
 
 prem = League("Premier League")
 
-prem.addTeam(arsenal)
+
+chelsea = Team("Chelsea", prem)
+arsenal = Team("Arsenal", prem)
+
+result = Result(chelsea, arsenal, 2, 1)
+
+
 prem.addTeam(chelsea)
-prem.addTeam(everton)
-prem.addTeam(burnley)
+prem.addTeam(arsenal)
 
-prem.displayLeague()
+# prem.displayLeague()
 
-# prem.inputResult(chelsea,arsenal,"win")
+
+prem.inputResult(result)
 
 print("----")
 
 
 prem.sortLeague()
-prem.displayLeague()
+# prem.displayLeague()
 
 
-print(0.1 + 0.1 + 0.1 - 0.3)
+chelsea.display_points()
