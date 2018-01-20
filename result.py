@@ -6,17 +6,17 @@ class Result:
 
     result = "tbc"
 
-    def __init__(self, home, away, scored, conceded):
+    def __init__(self, home, away, home_goals, away_goals):
         self.home = home
         self.away = away
-        self.scored = scored
-        self.conceded = conceded
+        self.home_goals = home_goals
+        self.away_goals = away_goals
 
 
     def calulatesResult(self):
-        if self.scored > self.conceded:
+        if self.home_goals > self.away_goals:
             self.result = "home win"
-        if self.conceded > self.scored:
+        if self.away_goals > self.home_goals:
             self.result = "away"
         else:
             self.result = "draw"
