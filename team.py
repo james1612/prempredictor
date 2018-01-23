@@ -7,7 +7,7 @@ class Team:
     draws = 0
     points = 0
 
-    eloScore = 1200
+
 
     def get_wins(self):
         return self.wins
@@ -17,9 +17,10 @@ class Team:
 
 
 
-    def __init__(self, name, league):
+    def __init__(self, name, league, elo_score = 1200):
         self.name = name
         self.league = league
+        self.elo_score = elo_score
 
     # def addWin(self):
     #     self.played +=1

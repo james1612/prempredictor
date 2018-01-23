@@ -4,7 +4,6 @@ from team import Team
 class Result:
     'A common class for a football result'
 
-    result = "tbc"
 
     def __init__(self, home, away, home_goals, away_goals):
         self.home = home
@@ -13,11 +12,14 @@ class Result:
         self.away_goals = away_goals
 
 
-    def calulatesResult(self):
+    def calulates_result(self):
         if self.home_goals > self.away_goals:
-            self.result = "home win"
+            return "home"
         if self.away_goals > self.home_goals:
-            self.result = "away"
+            return "away"
         else:
-            self.result = "draw"
+            return "draw"
 
+
+    def get_result(self):
+        return self.calulates_result()
