@@ -9,22 +9,22 @@ class League:
     def __init__(self, name):
         self.name = name
 
-    def addTeam(self, team):
+    def add_team(self, team):
         self.teams.append(team)
 
-    def removeTeam(self, team):
+    def remove_team(self, team):
         self.teams.remove(team)
 
-    def inputResult(self, result):
+    def input_result(self, result):
         self.results.append(result)
 
-    def removeResult(self, result):
+    def remove_result(self, result):
         self.results.remove(result)
 
-    # def displayLeague(self):
-    #     for team in self.teams:
-    #         team.calulatePoints()
-    #         print(team.name, "- Points: ", team.points, " Wins -", team.wins, " Draws -", team.draws, " Losses -", team.losses)
+    def display_league(self):
+        for team in self.teams:
+            team.calculate_points()
+            print(team.name, ": Points- ", team.points, " Wins -", team.wins, " Draws -", team.draws, " Losses -", team.losses)
 
 
 

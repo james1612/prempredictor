@@ -8,8 +8,8 @@ prem = League("Premier League")
 chelsea = Team("Chelsea", prem, 1600)
 arsenal = Team("Arsenal", prem)
 
-prem.addTeam(chelsea)
-prem.addTeam(arsenal)
+prem.add_team(chelsea)
+prem.add_team(arsenal)
 
 # elo_calculator = Elo_calculator(chelsea, arsenal)
 
@@ -26,9 +26,16 @@ result = Result(chelsea, arsenal, 1, 0)
 # print(elo_calculator.get_team_b_elo())
 
 
-chelsea.wins += 345
+
+
+
+
+
+prem.input_result(result)
+
+# chelsea.addWin()
 
 print(chelsea.wins)
 
 
-prem.inputResult(result)
+prem.display_league()

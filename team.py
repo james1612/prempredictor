@@ -7,15 +7,11 @@ class Team:
     draws = 0
     points = 0
 
-
-
     def get_wins(self):
         return self.wins
 
     def set_wins(self, wins):
         self.wins = wins
-
-
 
     def __init__(self, name, league, elo_score = 1200):
         self.name = name
@@ -34,34 +30,41 @@ class Team:
     #     self.played +=1
     #     self.losses += 1
 
-    def calulatePoints(self):
+    # def calculatePoints(self):
+    #     self.points =  (3*self.wins) + self.draws
+
+    def calculate_points(self):
+        self.calculateDraws()
+        self.calculateWins()
+        self.calculateLosses()
         self.points =  (3*self.wins) + self.draws
+
+
+    def display_points(self):
+        self.calculatePoints()
+        print(self.points)
 
     def last5results(self):
         return self.totalResults[-5:]
 
     def calculateWins(self):
         for result in self.league.results:
-            if result.home == self.name and result.result == "home win":
+            if result.home == self.name and result.get_result() == "home":
                 self.wins += 1
-            if result.away == self.name and result.result == "away win":
+            if result.away == self.name and result.get_result == "away":
                 self.wins += 1
 
     def calculateLosses(self):
         for result in self.league.results:
-            if result.home == self.name and result.result == "away win":
+            if result.home == self.name and result.get_result == "away":
                 self.losses += 1
-            if result.away == self.name and result.result == "home win":
+            if result.away == self.name and result.get_result == "home":
                 self.losses += 1
 
     def calculateDraws(self):
         for result in self.league.results:
-            if result.home == self.name and result.result == "draw":
+            if result.home == self.name and result.get_result == "draw":
                 self.draws += 1
-            if result.away == self.name and result.result == "draw":
+            if result.away == self.name and result.get_result == "draw":
                 self.draws += 1
 
-
-    def display_points(self):
-        self.calulatePoints()
-        print(self.points)

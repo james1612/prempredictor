@@ -12,7 +12,7 @@ class Result:
         self.away_goals = away_goals
 
 
-    def calulates_result(self):
+    def calculates_result(self):
         if self.home_goals > self.away_goals:
             return "home"
         if self.away_goals > self.home_goals:
