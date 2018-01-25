@@ -1,23 +1,22 @@
 from team import Team
 
 
+
 class Elo_calculator:
 
-    def __init__(self, home, away):
-        self.home = home
-        self.away = away
+    def __init__(self, team_a, team_b):
+        self.team_a = team_a
+        self.team_b = team_b
 
 
-    def expected_score_home(self):
-        ea = 1 / (1 + 10**((self.away.elo_score - self.home.elo_score)/400))
-        return ea
+    def expected(self):
+        return 1 / (1 + 10 ** ((self.team_b.elo_score - self.team_a.elo_score) / 400))
 
-    def expected_score_away(self):
-        eb = 1 / (1 + 10**((self.home.elo_score - self.away.elo_score)/400))
-        return eb
+
 
     def actual_scores(self, expected, result, k=32):
         result = result.get_result()
+        number_result = 0
         if result == 'home':
             number_result = 1
         if result == 'away':
@@ -25,12 +24,15 @@ class Elo_calculator:
         if result == 'draw':
             number_result = 0.5
 
-        return self.home.elo_score + k * (number_result - expected)
+        self.team_a.elo_score = self.team_a.elo_score + k * (number_result - expected)
+        self.team_b.elo_score = self.team_b.elo_score + k * (number_result - expected)
+
+        return self.team_a
 
 
+    def get_team_a_elo(self):
+        return self.team_a.elo_score
 
-
-
-
-
+    def get_team_b_elo(self):
+        return self.team_b.elo_score
 
