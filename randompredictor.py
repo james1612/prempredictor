@@ -22,3 +22,4 @@ def predicts_league(league):
             result.home_goals = 0
             result.away_goals = 1
 
+

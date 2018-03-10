@@ -10,7 +10,7 @@ LOSE_THRESHOLD = 0.5 - THRESHOLD
 
 prem = League("Premier League")
 
-# list_of_seasons = ['prem93:94.csv']
+list_of_seasons = ['prem93:94.csv']
 
 # list_of_seasons = ['prem04:05.csv']
 
@@ -21,10 +21,10 @@ prem = League("Premier League")
 # list_of_seasons = ['prem93:94.csv', 'prem94:95.csv', 'prem95:96.csv', 'prem96:97.csv', 'prem97:98.csv', 'prem98:99.csv',
 #                     'prem99:00.csv', 'prem00:01.csv', 'prem01:02.csv', 'prem02:03.csv', 'prem03:04.csv']
 
-list_of_seasons = ['prem93:94.csv', 'prem94:95.csv', 'prem95:96.csv', 'prem96:97.csv', 'prem97:98.csv', 'prem98:99.csv',
-                   'prem99:00.csv', 'prem00:01.csv', 'prem01:02.csv', 'prem02:03.csv', 'prem03:04.csv', 'prem04:05.csv',
-                   'prem05:06.csv', 'prem06:07.csv', 'prem07:08.csv', 'prem08:09.csv', 'prem09:10.csv', 'prem10:11.csv',
-                   'prem11:12.csv', 'prem12:13.csv', 'prem13:14.csv', 'prem14:15.csv', 'prem15:16.csv', 'prem16:17.csv']
+# list_of_seasons = ['prem93:94.csv', 'prem94:95.csv', 'prem95:96.csv', 'prem96:97.csv', 'prem97:98.csv', 'prem98:99.csv',
+#                    'prem99:00.csv', 'prem00:01.csv', 'prem01:02.csv', 'prem02:03.csv', 'prem03:04.csv', 'prem04:05.csv',
+#                    'prem05:06.csv', 'prem06:07.csv', 'prem07:08.csv', 'prem08:09.csv', 'prem09:10.csv', 'prem10:11.csv',
+#                    'prem11:12.csv', 'prem12:13.csv', 'prem13:14.csv', 'prem14:15.csv', 'prem15:16.csv', 'prem16:17.csv']
 
 
 
