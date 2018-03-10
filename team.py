@@ -1,11 +1,11 @@
 class Team:
     'Common class for football teams'
 
-    def __init__(self, name, league, elo_score = 1200, glicko_score = 1500):
+    def __init__(self, name, league, elo_score = 1200):
         self.name = name
         self.league = league
         self.elo_score = elo_score
-        self.glicko_score = glicko_score
+
 
     def __repr__(self):
         return "<Team '{name}'>".format(name=self.name)

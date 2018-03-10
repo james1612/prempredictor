@@ -11,7 +11,7 @@ class CsvReader:
     def results(self):
         results = []
 
-        f = open(self.csv_file)
+        f = open(self.csv_file, encoding='windows-1252')
         matches = csv.reader(f)
 
         # Skip headers
