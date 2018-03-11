@@ -4,11 +4,13 @@ from team import Team
 class League:
     'Common class for a football league'
 
-    teams = []
-    results = []
+    # teams = []
+    # results = []
 
     def __init__(self, name):
         self.name = name
+        self.teams = []
+        self.results = []
 
     def get_team(self, name):
         '''
